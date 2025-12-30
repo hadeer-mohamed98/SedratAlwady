@@ -214,19 +214,16 @@ export default function Contact() {
               {status && <p className="text-center text-[#3CAB41]">{status}</p>}
 
               {/* Button */}
-            <button
-  type="submit"
-  disabled={isLoading}
-  className={`bg-[#3CAB41] text-white font-medium py-3 px-10 rounded-md 
-  transition ${
-    isLoading
-      ? "opacity-50 cursor-not-allowed"
-      : "hover:bg-[#349A3A]"
-  }`}
->
-  {isLoading ? "Sending..." : "Book Now»"}
-</button>
-
+              <button
+                type="submit"
+                disabled={isLoading}
+                className={`bg-[#3CAB41] text-white font-medium py-3 px-10 rounded-md 
+                transition ${
+                  isLoading ? "opacity-50 cursor-not-allowed" : "hover:bg-[#349A3A]"
+                }`}
+              >
+                {isLoading ? "Sending..." : "Book Now»"}
+              </button>
             </form>
           </div>
 

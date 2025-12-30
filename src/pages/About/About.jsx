@@ -86,10 +86,6 @@ const cards3 = [
     id: 2,
     img: certificate2,
   },
-  {
-    id: 3,
-    img: certificate1,
-  },
 ];
 
 export default function About() {
@@ -115,17 +111,17 @@ export default function About() {
       {/* CEO Word */}
       <div className="bg-gray-100 py-10 md:py-14 lg:py-20">
         <section className="container mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+          <div className="flex flex-col-reverse md:flex-col-4 gap-8 justify-center items-center">
             {/* ===== Text Section (2/3) ===== */}
             <div
               ref={leftRef}
-              className={`md:col-span-2 text-left ${leftClass}`}
+              className={`md:col-span-2 text-center max-w-4xl ${leftClass}`}
             >
-              <h1 className="text-2xl sm:text-3xl md:text-5xl font-semibold text-[#0B3D2E] leading-tight mb-6">
+              <h1 className="text-2xl sm:text-3xl font-bold text-[#0B3D2E] leading-tight my-6">
                 Chairman’s Message
               </h1>
 
-              <p className="text-gray-500 mb-5 text-base sm:text-lg md:text-xl leading-relaxed">
+              <p className="text-justify  text-gray-500 pb-2 text-base sm:text-lg leading-relaxed">
                 Our Valued Clients and Partners, Since the establishment of
                 Sedrat Al-Wadi Company three years ago, we have set a clear
                 goal: to be a trusted partner in the fields of general
@@ -134,13 +130,13 @@ export default function About() {
                 Arabia.
               </p>
 
-              <p className="text-gray-500 mb-5 text-base sm:text-lg md:text-xl leading-relaxed">
+              <p className="text-justify  text-gray-500 pb-2 text-base sm:text-lg leading-relaxed">
                 Our success was not a coincidence; it is the result of a
                 dedicated team, a clear vision, and our commitment to innovative
                 solutions and high execution standards.
               </p>
 
-              <p className="text-gray-500 text-base sm:text-lg md:text-xl leading-relaxed">
+              <p className="text-justify  text-gray-500 pb-2 text-base sm:text-lg leading-relaxed">
                 I personally promise that we will continue investing in our team
                 and capabilities, expanding our scope of work, and delivering
                 projects that meet your aspirations.
@@ -157,7 +153,7 @@ export default function About() {
             {/* ===== Image Section (1/3) ===== */}
             <div
               ref={rightRef}
-              className={`md:col-span-1 flex justify-center ${rightClass}`}
+              className={`md:col-span-2 flex justify-center ${rightClass}`}
             >
               <div className="relative">
                 <img
@@ -255,7 +251,7 @@ export default function About() {
       {/* vision section */}
       <section className="py-12 sm:py-16 md:py-20 bg-[#F9F9F9]">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {cards2.map((card, index) => (
               <div
                 key={index}
@@ -270,7 +266,7 @@ export default function About() {
                   <div className="absolute inset-0 bg-green-800/20 opacity-0 group-hover:opacity-100 transition" />
                 </div>
 
-                <div className="p-6 sm:p-8">
+                <div className="text-justify p-6 sm:p-8">
                   <div className="mb-3">{card.icon}</div>
                   <h3 className="text-xl font-bold text-[#0B3D2E] mb-2">
                     {card.title}
@@ -301,9 +297,9 @@ export default function About() {
         />
         <div className="absolute inset-0 -z-10 bg-[#ebebebd3]" />
 
-        <div className="max-w-5xl mx-auto relative px-4 sm:px-6 ">
+        <div className=" max-w-5xl mx-auto relative px-4 sm:px-6 ">
           {/* LEFT ARROW */}
-          <button
+          {/* <button
             onClick={() => swiperRef.current?.slidePrev()}
             className="hidden lg:flex absolute -left-16 top-1/2 -translate-y-1/2 z-50
                  bg-transparent border border-green-600/40 backdrop-blur-sm
@@ -312,10 +308,10 @@ export default function About() {
                  hover:bg-green-700 hover:text-gray-200 transition"
           >
             <MoveLeft size={26} />
-          </button>
+          </button> */}
 
           {/* RIGHT ARROW */}
-          <button
+          {/* <button
             onClick={() => swiperRef.current?.slideNext()}
             className="hidden lg:flex absolute -right-16 top-1/2 -translate-y-1/2 z-50
                  bg-transparent border border-green-600/40 backdrop-blur-sm
@@ -324,7 +320,7 @@ export default function About() {
                  hover:bg-green-700 hover:text-gray-200 transition"
           >
             <MoveRight size={26} />
-          </button>
+          </button> */}
 
           <Swiper
             modules={[Autoplay]}
@@ -348,9 +344,9 @@ export default function About() {
               >
                 <div
                   className="group relative bg-white shadow-md rounded-xl
-                          text-center px-6 py-14 sm:py-16 md:py-20
+                          text-center px-6 py-14 md:mx-3 gap-4
                           transition-all duration-300 hover:-translate-y-1
-                          cursor-grab"
+                          cursor-pointer"
                 >
                   <div
                     className="absolute top-0 left-0 w-full h-2 bg-transparent
@@ -360,7 +356,7 @@ export default function About() {
                   <img
                     src={card.img}
                     alt="certificate"
-                    className="mx-auto max-w-full h-auto"
+                    className="mx-auto "
                   />
 
                   <div

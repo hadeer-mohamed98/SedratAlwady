@@ -110,7 +110,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { MoveLeft, MoveRight } from "lucide-react";
 
-import logo1 from "../../assets/partners/Alinmaa-bank.jpg";
+import logo1 from "../../assets/partners/Alinmaa-bank.png";
 import logo2 from "../../assets/partners/Alomeir.jpg";
 import logo3 from "../../assets/partners/alrajhi-bank.jpg";
 import logo4 from "../../assets/partners/Astra-construction.jpg";
@@ -201,7 +201,7 @@ export default function Partners() {
                     md:w-32 md:h-20
                     lg:w-36 lg:h-24
                     object-contain
-                    grayscale hover:grayscale-0
+                    cursor-grab
                     transition duration-300
                   "
                 />

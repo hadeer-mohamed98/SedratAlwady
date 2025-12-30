@@ -37,7 +37,7 @@ export default function SupplyingTrees() {
               SUPPLYING TREES
             </h1>
 
-            <p className="text-gray-500 mb-6 text-base sm:text-lg max-w-lg">
+            <p className="text-justify text-gray-500 mb-6 text-base sm:text-lg max-w-lg">
               Sedrat Al Wady: In ecosystems, trees stand as silent architecture,
               providing oxygen, shaping landscapes, and embodying the timeless
               connection between nature and humanity. Its sustainable supply

@@ -36,7 +36,7 @@ export default function LandScape() {
               LANDSCAPE
             </h1>
 
-            <p className="text-gray-500 mb-6 text-base sm:text-lg max-w-lg">
+            <p className="text-justify text-gray-500 mb-6 text-base sm:text-lg max-w-lg">
               Sedrat Al Wady for general contracting provides quality products
               and services to the landscape industry throughout the region. Our
               services vary in providing landscaping services with proven

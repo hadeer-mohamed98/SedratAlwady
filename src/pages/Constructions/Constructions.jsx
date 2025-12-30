@@ -47,7 +47,7 @@ export default function Constructions() {
             CONSTRUCTION
           </h1>
 
-          <p className="text-gray-500 mb-6 text-base sm:text-lg max-w-lg">
+          <p className="text-justify text-gray-500 mb-6 text-base sm:text-lg max-w-lg">
             Sedrat Al Wady for general contracting provides a range of services
             that end up structuring a winning formula for tackling and managing
             your construction project effectively, including:

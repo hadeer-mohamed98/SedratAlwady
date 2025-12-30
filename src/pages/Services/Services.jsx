@@ -23,11 +23,11 @@ export default function Services() {
         <section className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between px-4 sm:px-8 lg:px-16 gap-12">
           {/* Text */}
           <div className="flex-1 text-left">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#0B3D2E] leading-tight mb-6">
+            <h1 className="text-3xl font-bold text-[#0B3D2E] leading-tight mb-6">
               CONSTRUCTION
             </h1>
 
-            <p className="text-gray-500 mb-8 max-w-lg lg:max-w-xl text-base sm:text-lg lg:text-xl">
+            <p className="text-justify text-gray-500 mb-8 max-w-lg text-base sm:text-lg lg:text-xl">
               We provide high-quality construction services delivered with
               precision, safety, and efficiency. Our team executes every project
               with professional standards, ensuring durability, accuracy, and
@@ -37,7 +37,7 @@ export default function Services() {
 
             <Link
               to="/services/constructions"
-              className="text-green-500 hover:text-green-800 text-base sm:text-lg lg:text-xl flex items-center gap-2"
+              className="text-green-500 hover:text-green-800 text-base sm:text-lg flex items-center gap-2"
             >
               Explore more <ArrowRight />
             </Link>
@@ -82,11 +82,11 @@ export default function Services() {
 
           {/* Text */}
           <div className="flex-1 text-left">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#0B3D2E] leading-tight mb-6">
+            <h1 className="text-3xl font-bold text-[#0B3D2E] leading-tight mb-6">
               LANDSCAPE
             </h1>
 
-            <p className="text-gray-500 mb-8 max-w-lg lg:max-w-xl text-base sm:text-lg lg:text-xl">
+            <p className="text-justify text-gray-500 mb-8 max-w-lg text-base sm:text-lg lg:text-xl">
               We design and create sustainable landscape spaces that combine
               beauty, functionality, and long-lasting greenery. Our landscapes
               enhance outdoor environments through innovative layouts, precise
@@ -95,7 +95,7 @@ export default function Services() {
 
             <Link
               to="/services/landscape"
-              className="text-green-500 hover:text-green-800 text-base sm:text-lg lg:text-xl flex items-center gap-2"
+              className="text-green-500 hover:text-green-800 text-base sm:text-lg  flex items-center gap-2"
             >
               Explore more <ArrowRight />
             </Link>
@@ -108,11 +108,11 @@ export default function Services() {
         <section className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between px-4 sm:px-8 lg:px-16 gap-12">
           {/* Text */}
           <div className="flex-1 text-left">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#0B3D2E] leading-tight mb-6">
+            <h1 className="text-3xl font-bold text-[#0B3D2E] leading-tight mb-6">
               SUPPLYING TREES
             </h1>
 
-            <p className="text-gray-500 mb-8 max-w-lg lg:max-w-xl text-base sm:text-lg lg:text-xl">
+            <p className="text-justify text-gray-500 mb-8 max-w-lg text-base sm:text-lg lg:text-xl">
               We supply high-quality trees and plants sourced from trusted
               nurseries. Our selections are carefully chosen to match regional
               climate, durability, and project requirements, ensuring healthy
@@ -121,7 +121,7 @@ export default function Services() {
 
             <Link
               to="/services/supplying-trees"
-              className="text-green-500 hover:text-green-800 text-base sm:text-lg lg:text-xl flex items-center gap-2"
+              className="text-green-500 hover:text-green-800 text-base sm:text-lg flex items-center gap-2"
             >
               Explore more <ArrowRight />
             </Link>

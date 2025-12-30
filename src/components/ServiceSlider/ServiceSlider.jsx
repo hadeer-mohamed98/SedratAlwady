@@ -11,7 +11,7 @@ import {
   MoveLeft,
   MoveRight,
 } from "lucide-react";
-import backgroundImg from "../../assets/mission.webp";
+import backgroundImg from "../../assets/our-service1.webp";
 
 const cards = [
   {
@@ -65,7 +65,7 @@ export default function ServiceSlider() {
       ></div>
 
       {/* Overlay for better contrast */}
-      <div className="absolute inset-0 -z-10 bg-[#0b3d2cd0]"></div>
+      {/* <div className="absolute inset-0 -z-10 bg-[#0b3d2cd0]"></div> */}
 
       <div className="max-w-5xl mx-auto px-2 overflow-visible relative">
         {/* LEFT ARROW */}

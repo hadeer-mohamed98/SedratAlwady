@@ -153,24 +153,24 @@ export default function Home() {
       <HomeHero />
 
       {/* ===== Company Introduction ===== */}
-      <section className="bg-gray-100 py-12 sm:py-16 md:py-20">
-        <div className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center gap-10">
+      <section className="bg-gray-100 py-12 sm:py-16 md:py-20 ">
+        <div className="max-w-8xl mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center gap-10">
           
           {/* Text */}
           <div
             ref={leftRef}
             className={`flex-1 text-left md:pl-10 ${leftClass}`}
           >
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#0B3D2E] leading-snug mb-4">
+            <h1 className="text-2xl sm:text-3xl font-bold text-[#0B3D2E]  mb-4">
               Sedrat Al Wadi was founded in 2023
             </h1>
 
-            <p className="text-gray-500 mb-4 max-w-xl text-sm sm:text-base md:text-lg">
+            <p className="text-justify leading-7 tracking-normal text-gray-500 mb-4 max-w-lg text-sm sm:text-base md:text-lg">
               and has become one of the leading companies in general contracting,
               landscape design, and hardscape works in Saudi Arabia.
             </p>
 
-            <p className="text-gray-500 max-w-xl text-sm sm:text-base md:text-lg">
+            <p className="text-justify leading-7 tracking-normal text-gray-500 max-w-lg text-sm sm:text-base md:text-lg">
               In 2025, the company was officially classified in construction,
               building, operation, maintenance, and services, earning the Fifth
               Grade Classification in the Kingdom of Saudi Arabia.
@@ -180,7 +180,7 @@ export default function Home() {
           {/* Image */}
           <div
             ref={rightRef}
-            className={`flex-1 flex justify-center ${rightClass}`}
+            className={`flex-1 flex justify-center p-4 ${rightClass}`}
           >
             <div className="relative">
               <img
@@ -211,16 +211,16 @@ export default function Home() {
       <section className="bg-white py-12 sm:py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-4">
           <div className="
-            bg-[#0B3D2C] border border-[#347e35]
+            bg-gray-100 shadow
             rounded-xl p-6 sm:p-8 md:p-10
             text-white text-center
             animate-fade-down
           ">
-            <h3 className="text-xl sm:text-2xl md:text-4xl font-semibold mb-8">
+            <h3 className="text-xl sm:text-2xl md:text-4xl text-[#0B3D2C] font-semibold mb-8">
               Commercial Registration Certificate
             </h3>
 
-            <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+            <div className="flex flex-col md:flex-row items-center justify-around gap-6">
               <img
                 src={certificate1}
                 alt="certificate"
