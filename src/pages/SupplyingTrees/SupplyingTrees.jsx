@@ -6,52 +6,50 @@ import sup1 from "../../assets/sup1.webp";
 import sup2 from "../../assets/sup2.webp";
 import sup3 from "../../assets/sup3.webp";
 import sup4 from "../../assets/sup4.webp";
-import sup5 from "../../assets/sup5.jpg";
-import sup6 from "../../assets/sup6.jpg";
-import heroImg from "../../assets/img4.jpg";
+import sup5 from "../../assets/sup5.webp";
+import sup6 from "../../assets/sup6.webp";
+import heroImg from "../../assets/img4.webp";
+import { useTranslation } from "react-i18next";
 
 export default function SupplyingTrees() {
-  const pageTitle = "Supplying Trees";
+  const { t, i18n } = useTranslation();
+  const isRTL = i18n.language === "ar";
 
   const images = [
-    { src: sup1, title: "Acacia Glauca" },
-    { src: sup2, title: "Landscape Trees" },
-    { src: sup3, title: "Poinciana Trees" },
-    { src: sup4, title: "Tecoma Trees" },
-    { src: sup5, title: "Ornamental Shrubs" },
-    { src: sup6, title: "Decorative Palms" },
+    { src: sup1, title: t("supplyingTreesPage.gallery.acacia") },
+    { src: sup2, title: t("supplyingTreesPage.gallery.landscape") },
+    { src: sup3, title: t("supplyingTreesPage.gallery.poinciana") },
+    { src: sup4, title: t("supplyingTreesPage.gallery.tecoma") },
+    { src: sup5, title: t("supplyingTreesPage.gallery.shrubs") },
+    { src: sup6, title: t("supplyingTreesPage.gallery.palms") },
   ];
 
   return (
     <>
       <ScrollToTopButton />
-      <BasicHero title={pageTitle} heroImg={heroImg} />
+      <BasicHero title={t("supplyingTreesPage.pageTitle")} heroImg={heroImg} />
 
       {/* service section */}
       <section className="bg-white py-10 md:py-14 lg:py-20">
         <div className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between px-4 sm:px-8 lg:px-16 gap-12">
-
           {/* Text */}
-          <div className="flex-1 text-left">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#0B3D2E] leading-tight mb-6">
-              SUPPLYING TREES
+          <div className={`flex-1 ${isRTL ? "text-right" : "text-left"}`}>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#0B3D2E] mb-6">
+              {t("supplyingTreesPage.sectionTitle")}
             </h1>
 
             <p className="text-justify text-gray-500 mb-6 text-base sm:text-lg max-w-lg">
-              Sedrat Al Wady: In ecosystems, trees stand as silent architecture,
-              providing oxygen, shaping landscapes, and embodying the timeless
-              connection between nature and humanity. Its sustainable supply
-              preserves harmony and beauty for generations.
+              {t("supplyingTreesPage.description")}
             </p>
 
             <ul className="text-gray-500 mb-6 text-base list-disc pl-6 max-w-lg space-y-1">
-              <li>Acacia glauca trees.</li>
-              <li>Tecoma trees.</li>
-              <li>Poinciana trees.</li>
+              <li>{t("supplyingTreesPage.list.acacia")}</li>
+              <li>{t("supplyingTreesPage.list.tecoma")}</li>
+              <li>{t("supplyingTreesPage.list.poinciana")}</li>
             </ul>
 
             <p className="text-gray-500 text-base sm:text-lg max-w-lg">
-              Not only that, but we offer everything you need in this field.
+              {t("supplyingTreesPage.footerText")}
             </p>
           </div>
 
@@ -61,12 +59,11 @@ export default function SupplyingTrees() {
               <TreePalm className="absolute bottom-4 left-4 sm:-bottom-6 sm:-left-6 w-12 h-12 sm:w-16 sm:h-16 text-white bg-[#00803abe] rounded-lg p-3 z-10" />
               <img
                 src={worker}
-                alt="engineers"
+                alt={t("supplyingTreesPage.pageTitle")}
                 className="w-full rounded-xl md:rounded-tl-[100px] shadow-lg object-cover"
               />
             </div>
           </div>
-
         </div>
       </section>
 
@@ -84,11 +81,9 @@ export default function SupplyingTrees() {
                 className="w-full h-full object-cover rounded-lg transition-transform duration-500 group-hover:scale-110"
               />
 
-              {/* overlay */}
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-              {/* title */}
-              <div className="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out">
+              <div className="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                 <h3 className="text-white text-sm sm:text-base font-semibold">
                   {item.title}
                 </h3>

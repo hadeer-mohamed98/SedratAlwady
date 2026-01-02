@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 
 export default function BasicHero({ title, heroImg }) {
+    const { t,i18n } = useTranslation();
+    const isRTL = i18n.language === "ar";
+  
   return (
     <section className="relative w-full min-h-screen flex items-center ">
       {/* ===== Background Image ===== */}
@@ -19,15 +24,15 @@ export default function BasicHero({ title, heroImg }) {
 
       {/* ===== Content ===== */}
       <div
-        className="
+        className={`
         relative z-10
         w-full md:w-1/2
-        px-4 sm:px-8 md:px-16
-        text-center md:text-left
-        md:translate-x-15
+        px-4 sm:px-8 md:px-20 lg:px-38
+        text-center ${isRTL ? "md:text-right" : "md:text-left"}
         text-white
         animate-slide-left
-      "
+         flex flex-col justify-center 
+      `}
       >
         <h2
           className="
@@ -45,7 +50,7 @@ export default function BasicHero({ title, heroImg }) {
             to="/"
             className="hover:text-[#1EAD68] transition-colors duration-300"
           >
-            Home
+            {t("nav.home")}
           </Link>
           <span className="text-white/90"> – {title}</span>
         </p>

@@ -25,70 +25,71 @@ import dots from "../../assets/Dotts.svg";
 import founder from "../../assets/ampoji.png";
 import UseScrollAnimation from "../../hooks/UseScrollAnimation/UseScrollAnimation.jsx";
 import ScrollToTopButton from "../../components/ScrollToTopButton/ScrollToTopButton.jsx";
-
-// who are we
-const cards = [
-  {
-    id: 1,
-    title:
-      "Since its establishment in 2023, Sedrat Al Wadi has aimed to deliver innovative contracting and landscaping solutions built on quality, expertise, and sustainability, fostering progress and value.",
-    icon: <Landmark size={40} />,
-  },
-  {
-    id: 2,
-    title:
-      "Thanks to our commitment to excellence, we proudly achieved the Fifth Grade Contractor Classification in 2025, a recognition of our clients’ trust in our professionalism and performance.",
-    icon: <Award size={40} />,
-  },
-  {
-    id: 3,
-    title:
-      "We work as one team to provide comprehensive services that include construction, landscaping, green space development, and infrastructure projects—all designed to harmonize modernity and nature.",
-    icon: <Trees size={40} />,
-  },
-];
-
-// vision section
-const cards2 = [
-  {
-    title: "Our Vision",
-    desc: "To become a leading provider in contracting and landscaping across Saudi Arabia by delivering innovative, sustainable, and high-quality projects that elevate outdoor environments.",
-    icon: (
-      <Telescope className="w-12 h-12 text-green-700 transition-transform duration-500 group-hover:rotate-y-180" />
-    ),
-    img: visionImg,
-  },
-  {
-    title: "Our Mission",
-    desc: "To achieve customer satisfaction by offering integrated solutions that combine aesthetic beauty, technical precision, and long-term reliability in every project we deliver.",
-    icon: (
-      <CircleCheckBig className="w-12 h-12 text-green-700 transition-transform duration-500 group-hover:rotate-y-180" />
-    ),
-    img: missionImg,
-  },
-  {
-    title: "Our Message",
-    desc: "We aim to create sustainable environments that harmonize nature with innovation, leaving a positive and lasting impact on communities and future generations.",
-    icon: (
-      <ClipboardPen className="w-12 h-12 text-green-700 transition-transform duration-500 group-hover:rotate-y-180" />
-    ),
-    img: messageImg,
-  },
-];
-
-// certificates
-const cards3 = [
-  {
-    id: 1,
-    img: certificate1,
-  },
-  {
-    id: 2,
-    img: certificate2,
-  },
-];
+import { useTranslation } from "react-i18next";
 
 export default function About() {
+  const { t, i18n } = useTranslation();
+  const isRTL = i18n.language === "ar";
+
+  // who are we
+  const cards = [
+    {
+      id: 1,
+      title: t("about.whoWeAre.card1"),
+      icon: <Landmark size={40} />,
+    },
+    {
+      id: 2,
+      title: t("about.whoWeAre.card2"),
+      icon: <Award size={40} />,
+    },
+    {
+      id: 3,
+      title: t("about.whoWeAre.card3"),
+      icon: <Trees size={40} />,
+    },
+  ];
+
+  // vision section
+  const cards2 = [
+    {
+      title: t("about.vision.title"),
+      desc: t("about.vision.desc"),
+      icon: (
+        <Telescope className="w-12 h-12 text-green-700 transition-transform duration-500 group-hover:rotate-y-180" />
+      ),
+      img: visionImg,
+    },
+    {
+      title: t("about.mission.title"),
+      desc: t("about.mission.desc"),
+      icon: (
+        <CircleCheckBig className="w-12 h-12 text-green-700 transition-transform duration-500 group-hover:rotate-y-180" />
+      ),
+      img: missionImg,
+    },
+    {
+      title: t("about.message.title"),
+      desc: t("about.message.desc"),
+      icon: (
+        <ClipboardPen className="w-12 h-12 text-green-700 transition-transform duration-500 group-hover:rotate-y-180" />
+      ),
+      img: messageImg,
+    },
+  ];
+
+  // certificates
+  const cards3 = [
+    {
+      id: 1,
+      img: certificate1,
+    },
+    {
+      id: 2,
+      img: certificate2,
+    },
+  ];
+
   const [leftRef, leftClass] = UseScrollAnimation(
     "animate-fade-down",
     "delay-300"
@@ -98,7 +99,7 @@ export default function About() {
     "delay-300"
   );
 
-  const pageTitle = "About Us";
+  const pageTitle = t("about.pageTitle");
   const swiperRef = useRef(null);
 
   return (
@@ -118,49 +119,54 @@ export default function About() {
               className={`md:col-span-2 text-center max-w-4xl ${leftClass}`}
             >
               <h1 className="text-2xl sm:text-3xl font-bold text-[#0B3D2E] leading-tight my-6">
-                Chairman’s Message
+                {t("about.chairmanMessage.title")}
               </h1>
 
-              <p className="text-justify  text-gray-500 pb-2 text-base sm:text-lg leading-relaxed">
-                Our Valued Clients and Partners, Since the establishment of
-                Sedrat Al-Wadi Company three years ago, we have set a clear
-                goal: to be a trusted partner in the fields of general
-                contracting and landscaping, and an active contributor to the
-                development of urban infrastructure within the Kingdom of Saudi
-                Arabia.
+              <p
+                className={`text-gray-500 pb-2 text-base sm:text-lg leading-relaxed ${
+                  isRTL ? "text-center" : "text-justify"
+                }`}
+              >
+                {t("about.chairmanMessage.p1")}
               </p>
 
-              <p className="text-justify  text-gray-500 pb-2 text-base sm:text-lg leading-relaxed">
-                Our success was not a coincidence; it is the result of a
-                dedicated team, a clear vision, and our commitment to innovative
-                solutions and high execution standards.
+              <p
+                className={`text-gray-500 pb-2 text-base sm:text-lg leading-relaxed ${
+                  isRTL ? "text-center" : "text-justify"
+                }`}
+              >
+                {t("about.chairmanMessage.p2")}
               </p>
 
-              <p className="text-justify  text-gray-500 pb-2 text-base sm:text-lg leading-relaxed">
-                I personally promise that we will continue investing in our team
-                and capabilities, expanding our scope of work, and delivering
-                projects that meet your aspirations.
+              <p
+                className={`text-gray-500 pb-2 text-base sm:text-lg leading-relaxed ${
+                  isRTL ? "text-center" : "text-justify"
+                }`}
+              >
+                {t("about.chairmanMessage.p3")}
               </p>
 
               <div className="mt-6">
-                <p className="font-bold text-gray-800">Chairman of the Board</p>
                 <p className="font-bold text-gray-800">
-                  Mohamed Hassan Al-Amboji
+                  {t("about.chairmanMessage.position")}
+                </p>
+                <p className="font-bold text-gray-800">
+                  {t("about.chairmanMessage.name")}
                 </p>
               </div>
             </div>
 
-            {/* ===== Image Section (1/3) ===== */}
+            {/* ===== Image Section ===== */}
             <div
               ref={rightRef}
               className={`md:col-span-2 flex justify-center ${rightClass}`}
             >
               <div className="relative">
-                <img
+                {/* <img
                   src={dots}
                   alt="dots decoration"
                   className="absolute -bottom-6 -left-6 w-14 h-14 z-0 hidden sm:block"
-                />
+                /> */}
                 <img
                   src={founder}
                   alt="Founder"
@@ -172,8 +178,6 @@ export default function About() {
               md:max-w-[360px]
               rounded-xl
               rounded-tl-[80px]
-              shadow-lg
-              animate-float
               z-10
             "
                 />
@@ -188,7 +192,7 @@ export default function About() {
         {/* Heading */}
         <div className="text-center mb-10 md:mb-16 px-4">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
-            Who Are We?
+            {t("about.whoWeAre.title")}
           </h2>
         </div>
 
@@ -211,6 +215,7 @@ export default function About() {
         {/* Swiper */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <Swiper
+            key={i18n.language}
             modules={[Autoplay]}
             loop
             autoplay={{ delay: 2100, disableOnInteraction: false }}
@@ -223,18 +228,25 @@ export default function About() {
           >
             {cards.map((card) => (
               <SwiperSlide key={card.id} className="pb-12">
-                <div className="group relative bg-white rounded-xl shadow-md text-center px-6 py-16 transition hover:-translate-y-1">
+                <div
+                  className="group relative bg-white rounded-xl shadow-md text-center
+                              px-6 py-10
+                              h-[300px]
+                              flex flex-col
+                              justify-center
+                              transition hover:-translate-y-1"
+                >
                   <div className="absolute top-0 left-0 w-full h-2 bg-transparent group-hover:bg-green-600 rounded-t-xl transition" />
 
-                  <div className="mb-4 flex justify-center text-green-700">
+                  <div className="mb-3 flex justify-center text-green-700">
                     {card.icon}
                   </div>
 
-                  <h3 className="text-lg font-bold text-[#0B3D2C] mb-2">
+                  <h3 className="text-lg font-bold text-[#0B3D2C] mb-1 grow">
                     {card.title}
                   </h3>
 
-                  <p className="text-sm text-gray-500 leading-relaxed">
+                  <p className="text-sm text-gray-500 leading-relaxed line-clamp-4">
                     {card.text}
                   </p>
 
@@ -249,13 +261,15 @@ export default function About() {
       </section>
 
       {/* vision section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-[#F9F9F9]">
+      <section className="flex justify-center py-12 sm:py-16 md:py-20 bg-[#F9F9F9]">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {cards2.map((card, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-lg overflow-hidden group transition"
+                className="bg-white rounded-xl shadow-lg overflow-hidden
+                          group transition h-[480px]
+                          flex flex-col w-full"
               >
                 <div className="relative h-48 sm:h-56 overflow-hidden">
                   <img
@@ -266,12 +280,12 @@ export default function About() {
                   <div className="absolute inset-0 bg-green-800/20 opacity-0 group-hover:opacity-100 transition" />
                 </div>
 
-                <div className="text-justify p-6 sm:p-8">
+                <div className="text-justify p-6 sm:p-8 flex flex-col flex-1">
                   <div className="mb-3">{card.icon}</div>
                   <h3 className="text-xl font-bold text-[#0B3D2E] mb-2">
                     {card.title}
                   </h3>
-                  <p className="text-gray-600 text-base leading-relaxed">
+                  <p className="text-gray-600 text-base leading-relaxed line-clamp-5">
                     {card.desc}
                   </p>
                 </div>
@@ -286,7 +300,7 @@ export default function About() {
         {/* Heading */}
         <div className="text-center mb-10 sm:mb-14 md:mb-20 px-4">
           <h2 className="inline-block text-2xl sm:text-3xl md:text-4xl font-bold text-green-700">
-            Certificates
+            {t("about.certificates")}
           </h2>
         </div>
 
@@ -323,6 +337,7 @@ export default function About() {
           </button> */}
 
           <Swiper
+            key={i18n.language}
             modules={[Autoplay]}
             loop
             autoplay={{ delay: 2100, disableOnInteraction: false }}
@@ -353,11 +368,7 @@ export default function About() {
                             group-hover:bg-green-600 rounded-t-xl transition"
                   />
 
-                  <img
-                    src={card.img}
-                    alt="certificate"
-                    className="mx-auto "
-                  />
+                  <img src={card.img} alt="certificate" className="mx-auto " />
 
                   <div
                     className="absolute -bottom-5 left-1/2 -translate-x-1/2

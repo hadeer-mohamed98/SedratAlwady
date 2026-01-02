@@ -1,0 +1,130 @@
+.hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Swiper لازم يبقى global */
+:global(.swiper),
+:global(.swiper-slide) {
+  height: 100%;
+  position: relative;
+}
+
+/* ================= STRIP MASK ================= */
+
+.stripMask {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  z-index: 1;
+  overflow: hidden;
+  flex-direction: row;
+}
+.stripMask {
+  direction: ltr !important;
+}
+
+.stripMask span {
+   width: calc(100% / var(--count));
+  height: 100%;
+  margin-left: -1px;
+  background-image: var(--img);
+  background-repeat: no-repeat;
+  opacity: 0;
+
+  background-size: calc(100% * var(--count) + 4px) 100%;
+  background-position-x: calc(var(--i) * 100% / (var(--count) - 1));
+  background-position-y: center;
+
+  animation: stripIn 0.8s ease forwards;
+  animation-delay: var(--delay);
+}
+
+/* منع الأنيميشن للسلايد غير النشط */
+:global(.swiper-slide:not(.swiper-slide-active)) .stripMask span {
+  animation: none;
+  opacity: 0;
+}
+
+/* directions */
+.dirRtl span {
+  transform: translateX(60px);
+}
+.dirLtr span {
+  transform: translateX(-60px);
+}
+
+.dirTtb {
+  flex-direction: column;
+}
+.dirTtb span {
+   width: 100%;
+  height: calc(100% / var(--count));
+
+  background-size: 100% calc(100% * var(--count));
+  background-position-x: center;
+  background-position-y: calc(var(--i) * 100% / (var(--count) - 1));
+
+  transform: translateY(-60px);
+}
+
+.dirBtt {
+  flex-direction: column;
+}
+.dirBtt span {
+   width: 100%;
+  height: calc(100% / var(--count));
+
+  background-size: 100% calc(100% * var(--count));
+  background-position-x: center;
+  background-position-y: calc(var(--i) * 100% / (var(--count) - 1));
+
+  transform: translateY(60px);
+}
+
+@keyframes stripIn {
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .stripMask {
+    display: none;
+  }
+
+  .mobileBg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    animation: mobileZoom 6s ease-in-out forwards;
+  }
+}
+
+@keyframes mobileZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+/* ================= OVERLAY ================= */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 2;
+}
+
+/* ================= CONTENT ================= */
+.heroContent {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+}

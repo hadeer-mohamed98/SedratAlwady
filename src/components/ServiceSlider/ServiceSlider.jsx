@@ -12,50 +12,51 @@ import {
   MoveRight,
 } from "lucide-react";
 import backgroundImg from "../../assets/our-service1.webp";
-
-const cards = [
-  {
-    id: 1,
-    title: "Expertise in Construction",
-    text: "Expert construction with precision",
-    icon: <Landmark size={40} />,
-  },
-  {
-    id: 2,
-    title: "Landscape & Hardscape Specialists",
-    text: "Creative landscape and hardscape",
-    icon: <Sprout size={40} />,
-  },
-  {
-    id: 3,
-    title: "Tree Supply & Maintenance",
-    text: "Reliable tree supply maintenance",
-    icon: <Trees size={40} />,
-  },
-  {
-    id: 4,
-    title: "Full Operation & Maintenance Services",
-    text: "Complete operation maintenance solutions",
-    icon: <UserCog size={40} />,
-  },
-  {
-    id: 5,
-    title: "High-Quality Execution Standards",
-    text: "Premium quality execution standards",
-    icon: <FileBadge size={40} />,
-  },
-];
+import { useTranslation } from "react-i18next";
 
 export default function ServiceSlider() {
+  const { t, i18n } = useTranslation();
+  const isRTL = i18n.language === "ar";
   const swiperRef = useRef(null);
+
+  const cards = [
+    {
+      id: 1,
+      title: t("services.cards.1.title"),
+      text: t("services.cards.1.text"),
+      icon: <Landmark size={40} />,
+    },
+    {
+      id: 2,
+      title: t("services.cards.2.title"),
+      text: t("services.cards.2.text"),
+      icon: <Sprout size={40} />,
+    },
+    {
+      id: 3,
+      title: t("services.cards.3.title"),
+      text: t("services.cards.3.text"),
+      icon: <Trees size={40} />,
+    },
+    {
+      id: 4,
+      title: t("services.cards.4.title"),
+      text: t("services.cards.4.text"),
+      icon: <UserCog size={40} />,
+    },
+    {
+      id: 5,
+      title: t("services.cards.5.title"),
+      text: t("services.cards.5.text"),
+      icon: <FileBadge size={40} />,
+    },
+  ];
 
   return (
     <section className="relative py-15 overflow-visible px-3">
       <div className="text-center pb-15 ">
         <h2 className="relative inline-block text-2xl sm:text-3xl md:text-4xl font-semibold text-white mx-auto">
-          Our Services
-          {/* <div className="block w-32 h-[3px] bg-white mx-auto mt-3"></div>
-          <div className="block w-20 h-[3px] bg-[#D4AB50] mx-auto mt-1"></div> */}
+          {t("services.title")}
         </h2>
       </div>
       {/* Background image */}
@@ -97,6 +98,8 @@ export default function ServiceSlider() {
         </button>
 
         <Swiper
+          key={i18n.language}
+          dir={isRTL ? "rtl" : "ltr"}
           modules={[Autoplay]}
           slidesPerView={1}
           spaceBetween={30}

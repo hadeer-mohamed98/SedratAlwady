@@ -9,6 +9,7 @@ lerna-debug.log*
 
 node_modules
 src/components/models.jsx
+src/components/HomeHero
 dist
 dist-ssr
 *.local

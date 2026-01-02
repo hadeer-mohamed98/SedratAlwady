@@ -71,11 +71,11 @@
 //               key={counter.id}
 //               className={`
 //                           ${counter.bg}
-//                           w-56 h-56 
-//                           rounded-full 
+//                           w-56 h-56
+//                           rounded-full
 //                           shadow-xl hover:scale-105
-//                           transition duration-300 
-//                           flex flex-col items-center justify-center 
+//                           transition duration-300
+//                           flex flex-col items-center justify-center
 //                           p-6 mx-auto
 //                         `}
 //             >
@@ -99,37 +99,39 @@
 import { useState, useEffect, useRef } from "react";
 import CountUp from "react-countup";
 import { Users, Building, Clock, Hammer } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function Counters() {
   const [inView, setInView] = useState(false);
   const sectionRef = useRef(null);
+  const { t } = useTranslation();
 
   const counters = [
     {
       id: 1,
       icon: Users,
-      title: "Happy Clients",
+      title: t("counters.happyClients"),
       value: 220,
       bg: "bg-[#DEB339]",
     },
     {
       id: 2,
       icon: Building,
-      title: "Completed Projects",
+      title: t("counters.completedProjects"),
       value: 180,
       bg: "bg-[#00B13D]",
     },
     {
       id: 3,
       icon: Clock,
-      title: "Years of Experience",
+      title: t("counters.experience"),
       value: 3,
       bg: "bg-[#00978B]",
     },
     {
       id: 4,
       icon: Hammer,
-      title: "Team Members",
+      title: t("counters.team"),
       value: 120,
       bg: "bg-[#B1DB20]",
     },
@@ -156,7 +158,7 @@ export default function Counters() {
       {/* ===== Title ===== */}
       <div className="text-center mb-10 sm:mb-14 md:mb-20">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#0B3D2E]">
-          Our Achievements
+          {t("counters.title")}
         </h2>
       </div>
 

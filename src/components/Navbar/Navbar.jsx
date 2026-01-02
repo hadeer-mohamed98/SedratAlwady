@@ -1,9 +1,13 @@
 import { useState, useEffect, useRef } from "react";
 import { NavLink, Link, useNavigate } from "react-router-dom";
-import { Phone, Menu, X } from "lucide-react";
+import { Phone, Menu, X, Globe } from "lucide-react";
 import logo from "../../assets/color-logo.svg";
+import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
+  const { t, i18n } = useTranslation();
+  const isRTL = i18n.language === "ar";
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [dropdownVisible, setDropdownVisible] = useState(false);
@@ -22,6 +26,10 @@ export default function Navbar() {
       setDropdownVisible(true);
       setTimeout(() => setDropdownOpen(true), 10);
     }
+  };
+  const toggleLanguage = () => {
+    const newLang = i18n.language === "en" ? "ar" : "en";
+    i18n.changeLanguage(newLang);
   };
 
   // ✅ Close dropdown when clicking outside
@@ -77,21 +85,29 @@ export default function Navbar() {
           hideNavbar ? "opacity-0 pointer-events-none" : "opacity-100"
         }`}
       >
-        <header className="sticky md:absolute top-0 md:top-8 left-0 w-full z-50 bg-[#0b3d2e] md:bg-transparent text-white ">
-          <div className="mx-auto flex justify-between items-center h-32  md:px-22 px-5 ">
+        <header
+          className={`sticky md:absolute top-0 md:top-8 ${
+            isRTL ? "right-0" : "left-0"
+          } w-full z-50 bg-[#0b3d2e] md:bg-transparent text-white`}
+        >
+          <div className="mx-auto flex justify-around items-center h-38  md:px-22 px-5 ">
             {/* ===== Logo left ===== */}
             <div className="flex items-center justify-center gap-3 h-20 p-5 ">
-              <img src={logo} alt="Sedrat Alwady" className=" h-32 w-32" />
+              <img src={logo} alt="Sedrat Alwady" className=" h-38 w-38" />
             </div>
 
             {/* ===== center: Links ===== */}
-            <nav className="hidden md:flex items-center pb-6 gap-x-5 text-xl font-bold relative">
+            {/* <nav className="hidden md:flex items-center pb-6 gap-x-5 text-xl font-bold relative"> */}
+            <nav
+              dir={isRTL ? "rtl" : "ltr"}
+              className="hidden md:flex items-center pb-6 gap-x-5 text-xl font-bold relative"
+            >
               {[
-                { to: "/", label: "Home" },
-                { to: "/about", label: "About" },
-                { to: "/contact", label: "Contact" },
-                { to: "/projects", label: "projects" },
-                { to: "/services", label: "services" },
+                { to: "/", label: t("nav.home") },
+                { to: "/about", label: t("nav.about") },
+                { to: "/contact", label: t("nav.contact") },
+                { to: "/projects", label: t("nav.projects") },
+                { to: "/services", label: t("nav.services") },
               ].map((link, index, arr) => (
                 <div key={link.to} className="flex items-baseline ">
                   <NavLink
@@ -110,7 +126,11 @@ export default function Navbar() {
 
                   {/* الخط بين اللينكات */}
                   {index !== arr.length - 1 && (
-                    <span className="text-[#3CAB41] text-center font-bold text-xl pl-5 ">
+                    <span
+                      className={`text-[#3CAB41] text-center font-bold text-xl ${
+                        isRTL ? "pr-5" : "pl-5"
+                      } `}
+                    >
                       |
                     </span>
                   )}
@@ -152,7 +172,7 @@ export default function Navbar() {
 
                 {dropdownVisible && (
                   <div
-                    className={`absolute bg-white text-gray-800 top-full left-0 mt-3 w-56 rounded-md shadow-lg overflow-hidden border border-gray-100 transition-all duration-500 transform origin-top z-9999 ${
+                    className={`absolute bg-white text-gray-800 top-full ${isRTL ? "right-0" : "left-0"} mt-3 w-56 rounded-md shadow-lg overflow-hidden border border-gray-100 transition-all duration-500 transform origin-top z-9999 ${
                       dropdownOpen
                         ? "opacity-100 scale-y-100"
                         : "opacity-0 scale-y-75"
@@ -205,12 +225,25 @@ export default function Navbar() {
 
             {/* ===== Right Side: Contact Info ===== */}
             <div className="hidden md:flex items-center gap-3">
+              <button
+                onClick={toggleLanguage}
+                className="flex items-center gap-2 px-3 py-1.5 rounded-full
+             border border-white/30
+             hover:border-[#3CAB41] hover:text-[#3CAB41]
+             transition text-sm font-semibold"
+              >
+                <Globe className="w-4 h-4 block" />
+                <span className="leading-none">
+                  {i18n.language === "en" ? "AR" : "EN"}
+                </span>
+              </button>
+
               <span className="text-2xl text-gray-600">|</span>
               <div className="bg-[#3CAB41] p-3 rounded-full">
                 <Phone className="w-4 h-4 text-[#0b3d2e]" />
               </div>
               <div className="text-sm leading-tight">
-                <p className="font-semibold text-sm">Call In Anytime</p>
+                <p className="font-semibold text-sm">{t("nav.callAnytime")}</p>
                 <p className="text-gray-100 text-sm">009 665 3373 9903</p>
               </div>
             </div>
@@ -247,10 +280,10 @@ export default function Navbar() {
           >
             <ul className="flex flex-col px-6 py-4 space-y-3 text-lg font-medium">
               {[
-                { to: "/", label: "Home" },
-                { to: "/about", label: "About" },
-                { to: "/contact", label: "Contact" },
-                { to: "/projects", label: "projects" },
+                { to: "/", label: t("nav.home") },
+                { to: "/about", label: t("nav.about") },
+                { to: "/contact", label: t("nav.contact") },
+                { to: "/projects", label: t("nav.projects") },
               ].map((link) => (
                 <li key={link.to}>
                   <NavLink
@@ -275,7 +308,7 @@ export default function Navbar() {
                   onClick={toggleDropdown}
                   className="flex items-center justify-between w-full hover:text-[#3CAB41]"
                 >
-                  Services
+                  {t("nav.services")}
                 </button>
                 {dropdownVisible && (
                   <ul
@@ -291,7 +324,7 @@ export default function Navbar() {
                         onClick={() => handleLinkClick("/services")}
                         className="hover:text-[#3CAB41]"
                       >
-                        Services
+                        {t("nav.services")}
                       </Link>
                     </li>
                     <li>
@@ -300,7 +333,7 @@ export default function Navbar() {
                         onClick={() => handleLinkClick("/services/landscape")}
                         className="hover:text-[#3CAB41]"
                       >
-                        Landscape
+                        {t("nav.landscape")}
                       </Link>
                     </li>
                     <li>
@@ -311,7 +344,7 @@ export default function Navbar() {
                         }
                         className="hover:text-[#3CAB41]"
                       >
-                        Constructions
+                        {t("nav.constructions")}
                       </Link>
                     </li>
                     <li>
@@ -322,11 +355,25 @@ export default function Navbar() {
                         }
                         className="hover:text-[#3CAB41]"
                       >
-                        Supplying Trees
+                        {t("nav.supplyingTrees")}
                       </Link>
                     </li>
                   </ul>
                 )}
+              </li>
+              <li className="pt-3 border-t border-green-900">
+                <button
+                  onClick={() => {
+                    toggleLanguage();
+                    setMenuOpen(false);
+                  }}
+                  className="flex items-center gap-2 text-white hover:text-[#3CAB41] transition"
+                >
+                  <Globe className="w-4 h-4" />
+                  <span className="font-semibold">
+                    {i18n.language === "en" ? "العربية" : "English"}
+                  </span>
+                </button>
               </li>
 
               <li className="pt-3 border-t border-green-900 flex items-center gap-3">
@@ -334,7 +381,7 @@ export default function Navbar() {
                   <Phone className="w-4 h-4 text-[#0b3d2e]" />
                 </div>
                 <div className="text-sm leading-tight">
-                  <p className="font-semibold">Call In Anytime</p>
+                  <p className="font-semibold">{t("nav.callAnytime")}</p>
                   <p className="text-gray-500">009 665 3373 9903</p>
                 </div>
               </li>

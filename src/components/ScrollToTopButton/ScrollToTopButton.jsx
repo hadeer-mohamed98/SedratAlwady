@@ -32,7 +32,7 @@ export default function ScrollToTopButton() {
         ${visible ? "opacity-100 scale-100" : "opacity-0 scale-0"}
       `}
     >
-      <ChevronUp size={15} />
+      <ChevronUp size={22} />
     </button>
   );
 }

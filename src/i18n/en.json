@@ -1,0 +1,312 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "projects": "Projects",
+    "services": "Services",
+    "callAnytime": "Call In Anytime",
+    "landscape": "Landscape",
+    "constructions": "Constructions",
+    "supplyingTrees": "Supplying Trees"
+  },
+
+  "footer": {
+    "services": {
+      "title": "Our Services",
+      "generalContracting": "General contracting",
+      "landscape": "Landscape & hardscape",
+      "treeSupply": "Tree & plant supply",
+      "maintenance": "Maintenance services"
+    },
+
+    "projects": {
+      "title": "Our Projects",
+      "general": "General projects",
+      "marcia": "Marcia park 2",
+      "alhaer": "Al-haer road works",
+      "portfolio": "Our portfolio"
+    },
+
+    "quickLinks": {
+      "title": "Quick Links",
+      "home": "Home",
+      "about": "About Us",
+      "contact": "Contact Us",
+      "services": "Our Services"
+    },
+
+    "contact": {
+      "title": "Contact",
+      "callAnytime": "Call Anytime",
+      "email": "info@sedratalwady.com",
+      "address": "Riyadh, Sulaymaniah District, KSA",
+      "phone": "009 665 3373 9903"
+    },
+
+    "copyright": {
+      "rights": "Copyright © 2023. All Rights Reserved.",
+      "madeBy": "Made by New Hold"
+    }
+  },
+
+  "home": {
+    "introTitle": "Sedrat Al Wadi was founded in 2023",
+    "introText1": "and has become one of the leading companies in general contracting, landscape design, and hardscape works in Saudi Arabia.",
+    "introText2": "In 2025, the company was officially classified in construction, building, operation, maintenance, and services, earning the Fifth Grade Classification in the Kingdom of Saudi Arabia.",
+    "certificateTitle": "Commercial Registration Certificate"
+  },
+
+  "homeHero": {
+    "welcome": "Welcome To",
+    "company": "Sedrat Al Wady Company",
+    "heroSubtitle": "Your Partner in Construction & Landscaping Solutions",
+    "construction": "General construction",
+    "constructionDesc": "Providing Reliable Construction Solutions with High Quality Standards",
+    "landscape": "Landscape & Hardscape",
+    "landscapeDesc": "Designing Landscape & Hardscape Projects with Precision",
+    "projectsBtn": "Our Projects »",
+    "contactBtn": "Contact Us »"
+  },
+
+  "services": {
+    "title": "Our Services",
+    "cards": {
+      "1": {
+        "title": "Expertise in Construction",
+        "text": "Expert construction with precision"
+      },
+      "2": {
+        "title": "Landscape & Hardscape Specialists",
+        "text": "Creative landscape and hardscape"
+      },
+      "3": {
+        "title": "Tree Supply & Maintenance",
+        "text": "Reliable tree supply maintenance"
+      },
+      "4": {
+        "title": "Full Operation & Maintenance Services",
+        "text": "Complete operation maintenance solutions"
+      },
+      "5": {
+        "title": "High-Quality Execution Standards",
+        "text": "Premium quality execution standards"
+      }
+    }
+  },
+
+  "counters": {
+    "title": "Our Achievements",
+    "happyClients": "Happy Clients",
+    "completedProjects": "Completed Projects",
+    "experience": "Years of Experience",
+    "team": "Team Members"
+  },
+
+  "partners": {
+    "title": "Our Partners"
+  },
+
+  "about": {
+    "pageTitle": "About us",
+
+    "chairmanMessage": {
+      "title": "Chairman's message",
+      "p1": "Our valued clients and partners, since the establishment of Sedrat Al-Wadi company three years ago, we have set a clear goal: to be a trusted partner in the fields of general contracting and landscaping, and an active contributor to the development of urban infrastructure within the kingdom of Saudi Arabia.",
+      "p2": "Our success was not a coincidence; it is the result of a dedicated team, a clear vision, and our commitment to innovative solutions and high execution standards.",
+      "p3": "I personally promise that we will continue investing in our team and capabilities, expanding our scope of work, and delivering projects that meet your aspirations.",
+      "position": "Chairman of the board",
+      "name": "Mohamed Hassan Al-Amboji"
+    },
+
+    "whoWeAre": {
+      "title": " Who are we?",
+      "card1": "Since its establishment in 2023, Sedrat Al Wady has aimed to deliver innovative contracting and landscaping solutions built on quality, expertise, and sustainability, fostering progress and value.",
+      "card2": "Thanks to our commitment to excellence, we proudly achieved the fifth grade contractor classification in 2025, a recognition of our clients'trust in our professionalism and performance.",
+      "card3": "We work as one team to provide comprehensive services that include construction, landscaping, green space development, and infrastructure projects—all designed to harmonize modernity and nature."
+    },
+
+    "vision": {
+      "title": "Our Vision",
+      "desc": "To become a leading provider in contracting and landscaping across Saudi Arabia by delivering innovative, sustainable, and high-quality projects that elevate outdoor environments."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "desc": "To achieve customer satisfaction by offering integrated solutions that combine aesthetic beauty, technical precision, and long-term reliability in every project we deliver."
+    },
+    "message": {
+      "title": "Our Message",
+      "desc": "We aim to create sustainable environments that harmonize nature with innovation, leaving a positive and lasting impact on communities and future generations."
+    },
+
+    "certificates": "Certificates"
+  },
+
+  "contact": {
+    "title": "Contact us",
+    "required": "Required",
+    "book": "You can easily book your appointment",
+    "fillFields": "Please fill all fields",
+    "successfulMessage": "Message sent successfully!",
+    "failMessage": "Failed to send message. Try again.",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "subject": "Subject",
+    "message": "Write a message",
+    "bookNow": "Book now »",
+    "sending": "Sending...",
+    "getInTouch": "Get in touch",
+    "sendMessage": "Sending your message...",
+    "contactInfo": {
+      "email": "info@sedratalwady.com"
+    },
+    "branch1": {
+      "title": "Riyadh branch",
+      "add": "Add: Riyadh, Sulaymaniah-district, KSA",
+      "tel": "Tel: +966 53 373 9903"
+    },
+    "branch2": {
+      "title": "Dubai branch",
+      "add": "Add: Dubai, Economic Tower",
+      "tel": "Tel: +966 59 517 3060"
+    },
+    "branch3": {
+      "title": "Egypt branch",
+      "add": "Add: Egypt, City Stars Tower No. 7, 7th Floor",
+      "tel": "Tel: +20 106 159 8659"
+    }
+  },
+  "projects": {
+    "title": "Our projects",
+    "project1": "Marcia park 2, khuzam district, riyadh",
+    "project2": "Al-haer road works, industrial cities, riyadh"
+  },
+
+  "servicesPage": {
+    "pageTitle": "Our Services",
+
+    "construction": {
+      "title": "Construction",
+      "desc": "We provide high-quality construction services delivered with precision, safety, and efficiency. Our team executes every project with professional standards, ensuring durability, accuracy, and timely completion. From structural works to finishing, we build with integrity and excellence.",
+      "btn": "Explore more"
+    },
+
+    "landscape": {
+      "title": "Landscape",
+      "desc": "We design and create sustainable landscape spaces that combine beauty, functionality, and long-lasting greenery. Our landscapes enhance outdoor environments through innovative layouts, precise planting, and elegant natural elements.",
+      "btn": "Explore more"
+    },
+
+    "supplyingTrees": {
+      "title": "Supplying Trees",
+      "desc": "We supply high-quality trees and plants sourced from trusted nurseries. Our selections are carefully chosen to match regional climate, durability, and project requirements, ensuring healthy growth and long-term performance.",
+      "btn": "Explore more"
+    }
+  },
+  "constructionsPage": {
+    "pageTitle": "Constructions",
+
+    "section": {
+      "title": "Construction",
+      "intro": "Sedrat Al Wady for general contracting provides a range of services that end up structuring a winning formula for tackling and managing your construction project effectively, including:"
+    },
+
+    "list": {
+      "civil": "Civil Works (including steel and concrete works).",
+      "finishing": "High-End Finishing.",
+      "networking": "Networking Works.",
+      "electrical": "Electrical Works.",
+      "plumbing": "Plumbing Works.",
+      "hvac": "HVAC Works (including energy saving solutions).",
+      "fire": "Fire Fighting Works.",
+      "smart": "Smart Home Solutions.",
+      "operation": "Operation services for buildings and facilities.",
+      "cleaning": "Cleaning services for various buildings and facilities.",
+      "maintenance": "Building maintenance services."
+    },
+
+    "gallery": {
+      "electrical": "Electrical Works",
+      "hvac": "HVAC Works",
+      "plumbing": "Plumbing Systems",
+      "smart": "Smart Home Solutions",
+      "maintenance": "Maintenance Services",
+      "concrete": "Concrete Construction",
+      "steel": "Steel Structures",
+      "cleaning": "Cleaning Services",
+      "fire": "Fire Fighting Works",
+      "network": "Networking Works",
+      "civil": "Civil Works",
+      "finishing": "High-End Finishing"
+    }
+  },
+
+  "landscape": {
+    "pageTitle": "Landscape",
+    "sectionTitle": "LANDSCAPE",
+    "description": "Sedrat Al Wady for general contracting provides quality products and services to the landscape industry throughout the region. Our services vary in providing landscaping services with proven technical expertise, including:",
+    "list": {
+      "soft": "Soft landscape (Planting).",
+      "irrigation": "Irrigation including designing services.",
+      "hardscape": "Hardscape (paving, walkways & driveways inside landscape areas).",
+      "electromechanical": "Electromechanical works for water features like fountains, waterfalls & swimming pools.",
+      "lighting": "Outdoor lighting services.",
+      "furniture": "Garden furniture construction.",
+      "roads": "Road works."
+    },
+    "gallery": {
+      "irrigation": "Irrigation Systems",
+      "hardscape": "Hardscape Works",
+      "electromechanical": "Electromechanical",
+      "lighting": "Outdoor lighting services",
+      "furniture": "Garden furniture construction",
+      "roads": "Road works"
+    }
+  },
+
+  "supplyingTrees": {
+    "pageTitle": "Supplying Trees",
+    "sectionTitle": "SUPPLYING TREES",
+    "description": "Sedrat Al Wady: In ecosystems, trees stand as silent architecture, providing oxygen, shaping landscapes, and embodying the timeless connection between nature and humanity. Its sustainable supply preserves harmony and beauty for generations.",
+    "list": {
+      "acacia": "Acacia glauca trees.",
+      "tecoma": "Tecoma trees.",
+      "poinciana": "Poinciana trees."
+    },
+    "footerText": "Not only that, but we offer everything you need in this field.",
+    "gallery": {
+      "acacia": "Acacia Glauca",
+      "landscape": "Landscape Trees",
+      "poinciana": "Poinciana Trees",
+      "tecoma": "Tecoma Trees",
+      "shrubs": "Ornamental Shrubs",
+      "palms": "Decorative Palms"
+    }
+  },
+  
+  "supplyingTreesPage": {
+    "pageTitle": "Supplying Trees",
+    "sectionTitle": "SUPPLYING TREES",
+    "description": "Sedrat Al Wady: In ecosystems, trees stand as silent architecture, providing oxygen, shaping landscapes, and embodying the timeless connection between nature and humanity. Its sustainable supply preserves harmony and beauty for generations.",
+    "list": {
+      "acacia": "Acacia glauca trees.",
+      "tecoma": "Tecoma trees.",
+      "poinciana": "Poinciana trees."
+    },
+    "footerText": "Not only that, but we offer everything you need in this field.",
+    "gallery": {
+      "acacia": "Acacia Glauca",
+      "landscape": "Landscape Trees",
+      "poinciana": "Poinciana Trees",
+      "tecoma": "Tecoma Trees",
+      "shrubs": "Ornamental Shrubs",
+      "palms": "Decorative Palms"
+    }
+  }
+
+
+
+
+
+}

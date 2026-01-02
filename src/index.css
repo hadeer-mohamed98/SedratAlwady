@@ -268,9 +268,9 @@
   animation: slideFromTopRight 1s ease-out forwards;
 }
 
-.animate-grass {
+/* .animate-grass {
   animation: grassSlide 50s linear infinite;
-}
+} */
 
 /* ==== animation delays ==== */
 .delay-100 {
