@@ -106,7 +106,7 @@ export default function HeroSlider() {
               <div
                 className={`relative z-3 flex flex-col justify-center text-center ${
                   isRTL ? "md:text-right" : "md:text-left"
-                } h-full md:w-1/2 px-4 sm:px-8 md:px-20 lg:px-38`}
+                } h-full md:w-2/3 px-4 sm:px-8 md:px-20 lg:px-38`}
               >
                 {slide.welcome && (
                   <h2 className="text-white text-xl md:text-3xl font-bold pb-4">
