@@ -231,7 +231,7 @@ export default function About() {
                 <div
                   className="group relative bg-white rounded-xl shadow-md text-center
                               px-6 py-10
-                              h-[300px]
+                              h-[350px]
                               flex flex-col
                               justify-center
                               transition hover:-translate-y-1"

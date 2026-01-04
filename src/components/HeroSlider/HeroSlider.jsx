@@ -15,6 +15,8 @@ import { Link } from "react-router-dom";
 
 export default function HeroSlider() {
   const { t, i18n } = useTranslation();
+  const isRTL = i18n.language === "ar";
+
   const slides = [
     {
       image: slider1,
@@ -41,24 +43,22 @@ export default function HeroSlider() {
 
   const pieces = 8;
   const directions = ["rtl", "ltr", "ttb", "btt"];
-  
-const heroRef = useRef(null);
 
-useEffect(() => {
-  if (!heroRef.current) return;
+  const heroRef = useRef(null);
 
-  const el = heroRef.current;
-  el.style.visibility = "hidden";
+  useEffect(() => {
+    if (!heroRef.current) return;
 
-  requestAnimationFrame(() => {
-    el.style.visibility = "visible";
-  });
-}, [i18n.language]);
+    const el = heroRef.current;
+    el.style.visibility = "hidden";
 
+    requestAnimationFrame(() => {
+      el.style.visibility = "visible";
+    });
+  }, [i18n.language]);
 
   return (
-<section ref={heroRef} className={styles.hero}>
-
+    <section ref={heroRef} className={styles.hero}>
       <Swiper
         key={i18n.language}
         modules={[Autoplay]}
@@ -104,7 +104,9 @@ useEffect(() => {
               <div className={styles.overlay} />
 
               <div
-                className={`container mx-auto ${styles.heroContent} flex flex-col justify-center h-full max-w-7xl md:px-0 px-5`}
+                className={`relative z-3 flex flex-col justify-center text-center ${
+                  isRTL ? "md:text-right" : "md:text-left"
+                } h-full md:w-1/2 px-4 sm:px-8 md:px-20 lg:px-38`}
               >
                 {slide.welcome && (
                   <h2 className="text-white text-xl md:text-3xl font-bold pb-4">

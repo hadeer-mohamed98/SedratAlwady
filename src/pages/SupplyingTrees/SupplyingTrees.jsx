@@ -1,7 +1,7 @@
 import { TreePalm } from "lucide-react";
 import ScrollToTopButton from "../../components/ScrollToTopButton/ScrollToTopButton.jsx";
 import BasicHero from "../../components/BasicHero/BasicHero.jsx";
-import worker from "../../assets/engineers.webp";
+import supplyingTrees from "../../assets/supplyingTrees.webp";
 import sup1 from "../../assets/sup1.webp";
 import sup2 from "../../assets/sup2.webp";
 import sup3 from "../../assets/sup3.webp";
@@ -16,12 +16,12 @@ export default function SupplyingTrees() {
   const isRTL = i18n.language === "ar";
 
   const images = [
-    { src: sup1, title: t("supplyingTreesPage.gallery.acacia") },
-    { src: sup2, title: t("supplyingTreesPage.gallery.landscape") },
-    { src: sup3, title: t("supplyingTreesPage.gallery.poinciana") },
-    { src: sup4, title: t("supplyingTreesPage.gallery.tecoma") },
-    { src: sup5, title: t("supplyingTreesPage.gallery.shrubs") },
-    { src: sup6, title: t("supplyingTreesPage.gallery.palms") },
+    { src: sup1 },
+    { src: sup2 },
+    { src: sup3 },
+    { src: sup4 },
+    { src: sup5 },
+    { src: sup6 },
   ];
 
   return (
@@ -58,7 +58,7 @@ export default function SupplyingTrees() {
             <div className="relative w-full max-w-lg md:max-w-2xl lg:max-w-3xl">
               <TreePalm className="absolute bottom-4 left-4 sm:-bottom-6 sm:-left-6 w-12 h-12 sm:w-16 sm:h-16 text-white bg-[#00803abe] rounded-lg p-3 z-10" />
               <img
-                src={worker}
+                src={supplyingTrees}
                 alt={t("supplyingTreesPage.pageTitle")}
                 className="w-full rounded-xl md:rounded-tl-[100px] shadow-lg object-cover"
               />
@@ -77,17 +77,13 @@ export default function SupplyingTrees() {
             >
               <img
                 src={item.src}
-                alt={item.title}
+                alt="supplying trees"
                 className="w-full h-full object-cover rounded-lg transition-transform duration-500 group-hover:scale-110"
               />
 
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-              <div className="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                <h3 className="text-white text-sm sm:text-base font-semibold">
-                  {item.title}
-                </h3>
-              </div>
+              <div className="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
             </div>
           ))}
         </div>

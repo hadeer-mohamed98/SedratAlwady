@@ -19,7 +19,7 @@ import logo15 from "../../assets/partners/SAB.svg";
 import logo16 from "../../assets/partners/Riyad-bank.svg";
 import logo17 from "../../assets/partners/Shibh-aljazera.svg";
 import logo11 from "../../assets/partners/Masar-Aljazera.svg";
-import logo10 from "../../assets/partners/Hadifco.jpg";
+import logo10 from "../../assets/partners/Hadifco.svg";
 import logo8 from "../../assets/partners/fayfa.svg";
 import { useTranslation } from "react-i18next";
 

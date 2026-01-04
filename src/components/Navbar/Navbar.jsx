@@ -97,7 +97,6 @@ export default function Navbar() {
             </div>
 
             {/* ===== center: Links ===== */}
-            {/* <nav className="hidden md:flex items-center pb-6 gap-x-5 text-xl font-bold relative"> */}
             <nav
               dir={isRTL ? "rtl" : "ltr"}
               className="hidden md:flex items-center pb-6 gap-x-5 text-xl font-bold relative"
@@ -136,91 +135,7 @@ export default function Navbar() {
                   )}
                 </div>
               ))}
-
-              {/* ===== Dropdown: Services ===== */}
-              {/* <div
-                className="relative z-999"
-                ref={dropdownDesktopRef}
-                onMouseEnter={() => {
-                  setDropdownVisible(true);
-                  setTimeout(() => setDropdownOpen(true), 10);
-                }}
-                onMouseLeave={() => {
-                  setDropdownOpen(false);
-                  setTimeout(() => setDropdownVisible(false), 300);
-                }}
-              >
-                <NavLink
-                  to={"/services"}
-                  onClick={toggleDropdown}
-                  className="relative flex items-center pb-[22px] transition-all duration-500 font-bold cursor-pointer group 
-                   ${dropdownOpen ? 'text-[#3CAB41]' : 'hover:text-[#3CAB41]'}"
-                >
-                  Services
-                  <div
-                    className={`absolute left-1/2 -translate-x-1/2 -bottom-6 flex items-end gap-[3px] transition-all duration-500 transform ${
-                      dropdownOpen
-                        ? "opacity-100 translate-y-0"
-                        : "opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0"
-                    }`}
-                  >
-                    <span className="w-[3px] h-4 bg-[#3CAB41] rounded-full transition-all duration-500 group-hover:h-5" />
-                    <span className="w-[3px] h-6 bg-[#3CAB41] rounded-full transition-all duration-500 group-hover:h-7" />
-                    <span className="w-[3px] h-4 bg-[#3CAB41] rounded-full transition-all duration-500 group-hover:h-5" />
-                  </div>
-                </NavLink>
-
-                {dropdownVisible && (
-                  <div
-                    className={`absolute bg-white text-gray-800 top-full ${isRTL ? "right-0" : "left-0"} mt-3 w-56 rounded-md shadow-lg overflow-hidden border border-gray-100 transition-all duration-500 transform origin-top z-9999 ${
-                      dropdownOpen
-                        ? "opacity-100 scale-y-100"
-                        : "opacity-0 scale-y-75"
-                    }`}
-                  >
-                    <ul>
-                      <li
-                        className="px-5 py-3 hover:bg-gray-100 transition cursor-pointer"
-                        onClick={() =>
-                          handleLinkClick("/services", "Our Services")
-                        }
-                      >
-                        Services
-                      </li>
-                      <li
-                        className="px-5 py-3 hover:bg-gray-100 transition cursor-pointer"
-                        onClick={() =>
-                          handleLinkClick("/services/landscape", "Landscape")
-                        }
-                      >
-                        Landscape
-                      </li>
-                      <li
-                        className="px-5 py-3 hover:bg-gray-100 transition cursor-pointer"
-                        onClick={() =>
-                          handleLinkClick(
-                            "/services/constructions",
-                            "Constructions"
-                          )
-                        }
-                      >
-                        Constructions
-                      </li>
-                      <li
-                        className="px-5 py-3 hover:bg-gray-100 transition cursor-pointer"
-                        onClick={() =>
-                          handleLinkClick(
-                            "/services/supplying-trees",
-                            "Supplying Trees"
-                          )
-                        }
-                      >
-                        Supplying Trees
-                      </li>
-                    </ul>
-                  </div>
-                )}
-              </div> */}
+           
             </nav>
 
             {/* ===== Right Side: Contact Info ===== */}
@@ -244,7 +159,7 @@ export default function Navbar() {
               </div>
               <div className="text-sm leading-tight">
                 <p className="font-semibold text-sm">{t("nav.callAnytime")}</p>
-                <p className="text-gray-100 text-sm">009 665 3373 9903</p>
+                <p className="text-gray-100 text-sm">00966533739903</p>
               </div>
             </div>
 
@@ -382,7 +297,7 @@ export default function Navbar() {
                 </div>
                 <div className="text-sm leading-tight">
                   <p className="font-semibold">{t("nav.callAnytime")}</p>
-                  <p className="text-gray-500">009 665 3373 9903</p>
+                  <p className="text-gray-500">00966533739903</p>
                 </div>
               </li>
             </ul>
