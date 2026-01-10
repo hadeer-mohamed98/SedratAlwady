@@ -24,6 +24,7 @@ import BasicHero from "../../components/BasicHero/BasicHero.jsx";
 import dots from "../../assets/Dotts.svg";
 import founder from "../../assets/ampoji.png";
 import organizationalStructure from "../../assets/organizational-structure.png";
+import organizationalStructure2 from "../../assets/organizational-structure2.png";
 import UseScrollAnimation from "../../hooks/UseScrollAnimation/UseScrollAnimation.jsx";
 import ScrollToTopButton from "../../components/ScrollToTopButton/ScrollToTopButton.jsx";
 import { useTranslation } from "react-i18next";
@@ -80,16 +81,16 @@ export default function About() {
   ];
 
   // certificates
-  const cards3 = [
-    {
-      id: 1,
-      img: certificate1,
-    },
-    {
-      id: 2,
-      img: certificate2,
-    },
-  ];
+  // const cards3 = [
+  //   {
+  //     id: 1,
+  //     img: certificate1,
+  //   },
+  //   {
+  //     id: 2,
+  //     img: certificate2,
+  //   },
+  // ];
 
   const [leftRef, leftClass] = UseScrollAnimation(
     "animate-fade-down",
@@ -268,7 +269,17 @@ export default function About() {
             {t("about.organizationalStructure")}
           </h2>
         </div>
-        <img src={organizationalStructure} alt="" />
+        <img
+          src={organizationalStructure}
+          alt="Organizational Structure"
+          className="hidden md:block"
+        />
+
+        <img
+          src={organizationalStructure2}
+          alt="Organizational Structure Mobile"
+          className="block md:hidden"
+        />
       </section>
 
       {/* vision section */}
@@ -303,98 +314,6 @@ export default function About() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* certificates */}
-      <section className="relative py-12 sm:py-16 md:py-20 overflow-hidden">
-        {/* Heading */}
-        <div className="text-center mb-10 sm:mb-14 md:mb-20 px-4">
-          <h2 className="inline-block text-2xl sm:text-3xl md:text-4xl font-bold text-green-700">
-            {t("about.certificates")}
-          </h2>
-        </div>
-
-        {/* Background */}
-        <div
-          className="absolute inset-0 -z-20 bg-cover bg-center"
-          style={{ backgroundImage: `url(${missionImg})` }}
-        />
-        <div className="absolute inset-0 -z-10 bg-[#ebebebd3]" />
-
-        <div className=" max-w-5xl mx-auto relative px-4 sm:px-6 ">
-          {/* LEFT ARROW */}
-          {/* <button
-            onClick={() => swiperRef.current?.slidePrev()}
-            className="hidden lg:flex absolute -left-16 top-1/2 -translate-y-1/2 z-50
-                 bg-transparent border border-green-600/40 backdrop-blur-sm
-                 text-green-600 w-12 h-12 xl:w-14 xl:h-14
-                 items-center justify-center rounded-full
-                 hover:bg-green-700 hover:text-gray-200 transition"
-          >
-            <MoveLeft size={26} />
-          </button> */}
-
-          {/* RIGHT ARROW */}
-          {/* <button
-            onClick={() => swiperRef.current?.slideNext()}
-            className="hidden lg:flex absolute -right-16 top-1/2 -translate-y-1/2 z-50
-                 bg-transparent border border-green-600/40 backdrop-blur-sm
-                 text-green-600 w-12 h-12 xl:w-14 xl:h-14
-                 items-center justify-center rounded-full
-                 hover:bg-green-700 hover:text-gray-200 transition"
-          >
-            <MoveRight size={26} />
-          </button> */}
-
-          <Swiper
-            key={i18n.language}
-            modules={[Autoplay]}
-            loop
-            autoplay={{ delay: 2100, disableOnInteraction: false }}
-            spaceBetween={24}
-            breakpoints={{
-              0: { slidesPerView: 1 },
-              640: { slidesPerView: 2 },
-              1024: { slidesPerView: 2 },
-            }}
-            className="overflow-visible"
-            onSwiper={(swiper) => (swiperRef.current = swiper)}
-          >
-            {cards3.map((card) => (
-              <SwiperSlide
-                key={card.id}
-                className="pb-14"
-                onMouseEnter={() => swiperRef.current?.autoplay.stop()}
-                onMouseLeave={() => swiperRef.current?.autoplay.start()}
-              >
-                <div
-                  className="group relative bg-white shadow-md rounded-xl
-                          text-center px-6 py-14 md:mx-3 gap-4
-                          transition-all duration-300 hover:-translate-y-1
-                          cursor-pointer"
-                >
-                  <div
-                    className="absolute top-0 left-0 w-full h-2 bg-transparent
-                            group-hover:bg-green-600 rounded-t-xl transition"
-                  />
-
-                  <img src={card.img} alt="certificate" className="mx-auto " />
-
-                  <div
-                    className="absolute -bottom-5 left-1/2 -translate-x-1/2
-                            bg-white border-4 border-gray-200 rounded-full
-                            w-10 h-10 flex items-center justify-center
-                            font-semibold text-green-700
-                            group-hover:text-white group-hover:bg-green-700
-                            group-hover:border-green-600 transition-all"
-                  >
-                    {card.id}
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
         </div>
       </section>
     </>
