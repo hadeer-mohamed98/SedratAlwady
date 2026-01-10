@@ -145,6 +145,7 @@ export default function Footer() {
                   {t("footer.contact.email")}
                 </a>
               </li>
+              <li>{t("footer.contact.UNN")}</li>
               <li>{t("footer.contact.address")}</li>
             </ul>
 

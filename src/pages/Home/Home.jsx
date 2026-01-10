@@ -86,7 +86,7 @@ export default function Home() {
       </section>
 
       {/* ===== Certificates Section ===== */}
-      <section className="bg-white py-12 sm:py-16 md:py-20">
+      {/* <section className="bg-white py-12 sm:py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-4">
           <div
             className="
@@ -114,7 +114,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ===== Other Sections ===== */}
       <ServiceSlider />

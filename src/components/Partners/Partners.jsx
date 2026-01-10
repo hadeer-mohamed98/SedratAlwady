@@ -21,6 +21,9 @@ import logo17 from "../../assets/partners/Shibh-aljazera.svg";
 import logo11 from "../../assets/partners/Masar-Aljazera.svg";
 import logo10 from "../../assets/partners/Hadifco.svg";
 import logo8 from "../../assets/partners/fayfa.svg";
+import logo18 from "../../assets/partners/salalemAlyamamah.svg";
+import logo19 from "../../assets/partners/SCA.svg";
+
 import { useTranslation } from "react-i18next";
 
 export default function Partners() {
@@ -44,6 +47,8 @@ export default function Partners() {
     { id: 15, img: logo15 },
     { id: 16, img: logo16 },
     { id: 17, img: logo17 },
+    { id: 18, img: logo18 },
+    { id: 19, img: logo19 },
   ];
 
   return (

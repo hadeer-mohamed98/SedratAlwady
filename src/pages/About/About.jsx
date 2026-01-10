@@ -23,6 +23,7 @@ import certificate2 from "../../assets/certificate2.webp";
 import BasicHero from "../../components/BasicHero/BasicHero.jsx";
 import dots from "../../assets/Dotts.svg";
 import founder from "../../assets/ampoji.png";
+import organizationalStructure from "../../assets/organizational-structure.png";
 import UseScrollAnimation from "../../hooks/UseScrollAnimation/UseScrollAnimation.jsx";
 import ScrollToTopButton from "../../components/ScrollToTopButton/ScrollToTopButton.jsx";
 import { useTranslation } from "react-i18next";
@@ -258,6 +259,16 @@ export default function About() {
             ))}
           </Swiper>
         </div>
+      </section>
+
+      {/* organizational structure */}
+      <section className="container mx-auto bg-white">
+        <div className="text-center my-10 px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-700">
+            {t("about.organizationalStructure")}
+          </h2>
+        </div>
+        <img src={organizationalStructure} alt="" />
       </section>
 
       {/* vision section */}

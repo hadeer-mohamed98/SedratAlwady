@@ -39,19 +39,20 @@
     "contact": {
       "title": "Contact",
       "callAnytime": "Call Anytime",
+      "UNN": "UNN: 7035961296",
       "email": "info@sedratalwady.com",
       "address": "Riyadh, Sulaymaniah District, KSA",
       "phone": "00966533739903"
     },
 
     "copyright": {
-      "rights": "Copyright © 2023. All Rights Reserved.",
+      "rights": "Copyright © 2015. All Rights Reserved.",
       "madeBy": "Made by New Hold"
     }
   },
 
   "home": {
-    "introTitle": "Sedrat Alwady was founded in 2023",
+    "introTitle": "Sedrat Alwady was founded in 2015",
     "introText1": "and has become one of the leading companies in general contracting, landscape design, and hardscape works in Saudi Arabia.",
     "introText2": "In 2025, the company was officially classified in construction, building, operation, maintenance, and services in the Kingdom of Saudi Arabia.",
     "certificateTitle": "Commercial Registration Certificate"
@@ -121,10 +122,11 @@
 
     "whoWeAre": {
       "title": "Who are we?",
-      "card1": "Since its establishment in 2023, Sedrat Al Wady has been delivering innovative solutions in construction and landscaping, driven by a strong commitment to quality and sustainability, in alignment with the objectives of Saudi Vision 2030 to enhance urban development and quality of life.",
+      "card1": "Since its establishment in 2015, Sedrat Al Wady has been delivering innovative solutions in construction and landscaping, driven by a strong commitment to quality and sustainability, in alignment with the objectives of Saudi Vision 2030 to enhance urban development and quality of life.",
       "card2": "As part of our continuous pursuit of excellence, Sedrat Al Wady obtained an official construction classification in the Kingdom of Saudi Arabia in 2025, reflecting our adherence to national standards and our dedication to delivering reliable projects that support sustainable urban development.",
       "card3": "We believe in achieving harmony between construction and nature; therefore, we provide integrated services including construction works, landscaping, green space development, and infrastructure projects, contributing to the creation of sustainable urban environments aligned with Saudi Vision 2030."
     },
+    "organizationalStructure":"Organizational structure",
 
     "vision": {
       "title": "Our vision",
