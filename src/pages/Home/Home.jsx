@@ -1,14 +1,10 @@
 import dots from "../../assets/Dotts.svg";
-import worker from "../../assets/engineers.webp";
-import certificate1 from "../../assets/certificate1.webp";
-import certificate2 from "../../assets/certificate2.webp";
-
+import worker from "../../assets/engineers-2.webp";
 import UseScrollAnimation from "../../hooks/UseScrollAnimation/UseScrollAnimation.jsx";
 import ServiceSlider from "../../components/ServiceSlider/ServiceSlider.jsx";
 import Partners from "../../components/Partners/Partners.jsx";
 import Counters from "../../components/Counters/Counters.jsx";
 import ScrollToTopButton from "../../components/ScrollToTopButton/ScrollToTopButton.jsx";
-import HomeHero from "../../components/HomeHero/HomeHero.jsx";
 import { useTranslation } from "react-i18next";
 import HeroSlider from "../../components/HeroSlider/HeroSlider.jsx";
 

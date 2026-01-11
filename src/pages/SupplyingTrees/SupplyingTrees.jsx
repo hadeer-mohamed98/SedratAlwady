@@ -8,7 +8,7 @@ import sup3 from "../../assets/sup3.webp";
 import sup4 from "../../assets/sup4.webp";
 import sup5 from "../../assets/sup5.webp";
 import sup6 from "../../assets/sup6.webp";
-import heroImg from "../../assets/img4.webp";
+import heroImg from "../../assets/trees.webp";
 import { useTranslation } from "react-i18next";
 
 export default function SupplyingTrees() {
