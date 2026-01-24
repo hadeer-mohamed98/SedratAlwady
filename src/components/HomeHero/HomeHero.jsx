@@ -1,4 +1,3 @@
-
 // ================elegant2=================
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -15,46 +14,39 @@ import slider4 from "../../assets/HomeSlider/plant.webp";
 
 import { useTranslation } from "react-i18next";
 
-
 export default function HomeHero() {
- const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
-const SLIDE_DURATION = 5000;
+  const SLIDE_DURATION = 5000;
 
-const slides = [
-  {
-    image: slider1,
-    welcome: t("homeHero.welcome"),
-    title: t("homeHero.company"),
-    subtitle: t("homeHero.heroSubtitle"),
-  },
-  {
-    image: slider2,
-    title: t("homeHero.construction"),
-    subtitle: t("homeHero.constructionDesc"),
-  },
-  {
-    image: slider3,
-    title: t("homeHero.construction"),
-    subtitle: t("homeHero.constructionDesc"),
-  },
-  {
-    image: slider4,
-    title: t("homeHero.landscape"),
-    subtitle: t("homeHero.landscapeDesc"),
-  },
-];
-
+  const slides = [
+    {
+      image: slider1,
+      welcome: t("homeHero.welcome"),
+      title: t("homeHero.company"),
+      subtitle: t("homeHero.heroSubtitle"),
+    },
+    {
+      image: slider2,
+      title: t("homeHero.construction"),
+      subtitle: t("homeHero.constructionDesc"),
+    },
+    {
+      image: slider3,
+      title: t("homeHero.construction"),
+      subtitle: t("homeHero.constructionDesc"),
+    },
+    {
+      image: slider4,
+      title: t("homeHero.landscape"),
+      subtitle: t("homeHero.landscapeDesc"),
+    },
+  ];
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {/* Progress Bar */}
-      {/* <div className="hero-progress">
-        <span className="hero-progress-bar" />
-      </div> */}
-
       <Swiper
-       key={i18n.language} 
+        key={i18n.language}
         modules={[Autoplay, Navigation]}
         loop={true}
         speed={800}
@@ -121,5 +113,3 @@ const slides = [
     </section>
   );
 }
-
-

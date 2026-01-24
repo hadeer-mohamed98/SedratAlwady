@@ -74,23 +74,32 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2 sm:text-base md:text-lg text-gray-300">
               <li>
-                <Link to="/projects" className="hover:text-[#1EAD68] transition">
+                <Link
+                  to="/projects"
+                  className="hover:text-[#1EAD68] transition"
+                >
                   {t("footer.projects.general")}
                 </Link>
               </li>
               <li>
-                <Link to="/projects" className="hover:text-[#1EAD68] transition">
+                <Link
+                  to="/projects"
+                  className="hover:text-[#1EAD68] transition"
+                >
                   {t("footer.projects.marcia")}
                 </Link>
               </li>
               <li>
-                <Link to="/projects" className="hover:text-[#1EAD68] transition">
+                <Link
+                  to="/projects"
+                  className="hover:text-[#1EAD68] transition"
+                >
                   {t("footer.projects.alhaer")}
                 </Link>
               </li>
               <li>
                 <a
-                  href="https://drive.google.com/file/d/1GD7MAy95CEJdrLOsA8wQuahOstoG-o-h/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1sdAssGISe0T7fP-LEOItxryiT1VEXMy3/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-[#1EAD68] transition"
@@ -123,7 +132,10 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="hover:text-[#1EAD68] transition">
+                <Link
+                  to="/services"
+                  className="hover:text-[#1EAD68] transition"
+                >
                   {t("footer.quickLinks.services")}
                 </Link>
               </li>

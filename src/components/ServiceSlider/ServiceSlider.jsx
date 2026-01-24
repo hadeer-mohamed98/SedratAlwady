@@ -65,9 +65,6 @@ export default function ServiceSlider() {
         style={{ backgroundImage: `url(${backgroundImg})` }}
       ></div>
 
-      {/* Overlay for better contrast */}
-      {/* <div className="absolute inset-0 -z-10 bg-[#0b3d2cd0]"></div> */}
-
       <div className="max-w-5xl mx-auto px-2 overflow-visible relative">
         {/* LEFT ARROW */}
         <button

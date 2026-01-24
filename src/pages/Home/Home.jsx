@@ -81,37 +81,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== Certificates Section ===== */}
-      {/* <section className="bg-white py-12 sm:py-16 md:py-20">
-        <div className="max-w-6xl mx-auto px-4">
-          <div
-            className="
-            bg-gray-100 shadow
-            rounded-xl p-6 sm:p-8 md:p-10
-            text-white text-center
-            animate-fade-down
-          "
-          >
-            <h3 className="text-xl sm:text-2xl md:text-4xl text-[#0B3D2C] font-semibold mb-8">
-              {t("home.certificateTitle")}
-            </h3>
-
-            <div className="flex flex-col md:flex-row items-center justify-around gap-6">
-              <img
-                src={certificate1}
-                alt="certificate"
-                className="w-full max-w-sm rounded-md shadow-md"
-              />
-              <img
-                src={certificate2}
-                alt="certificate"
-                className="w-full max-w-sm rounded-md shadow-md"
-              />
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       {/* ===== Other Sections ===== */}
       <ServiceSlider />
       <Counters />

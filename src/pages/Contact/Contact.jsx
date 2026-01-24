@@ -101,7 +101,7 @@ export default function Contact() {
           {/* Left Text + Form */}
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0B3D2C] leading-snug mb-8">
-              {t("contact.book")} 
+              {t("contact.book")}
             </h2>
 
             <form className="space-y-4" onSubmit={handleSubmit}>
@@ -186,7 +186,7 @@ export default function Contact() {
                     : "hover:bg-[#349A3A]"
                 }`}
               >
-                {isLoading ?  t("contact.sending") : t("contact.bookNow")}
+                {isLoading ? t("contact.sending") : t("contact.bookNow")}
               </button>
             </form>
           </div>
@@ -221,13 +221,8 @@ export default function Contact() {
           {/* Right Side */}
           <div className="md:w-1/2 w-full">
             {/* Title */}
-            {/* <p className="text-[#2A7D2E] font-semibold mb-1 flex items-center gap-2">
-              {t("contact.title")}
-              <span className="w-10 h-0.5 bg-[#2A7D2E] inline-block"></span>
-            </p> */}
-
             <h2 className="text-3xl md:text-4xl font-extrabold text-[#0B3D2C] mb-3">
-              { t("contact.getInTouch")}
+              {t("contact.getInTouch")}
             </h2>
 
             {/* Card Box */}
@@ -236,7 +231,10 @@ export default function Contact() {
               {/* Email */}
               <div className="flex flex-col items-start gap-2 py-2">
                 <p className="text-gray-700 text-lg">
-                  <span className="text-gray-800 font-bold">  {t("contact.email")}: </span>{" "}
+                  <span className="text-gray-800 font-bold">
+                    {" "}
+                    {t("contact.email")}:{" "}
+                  </span>{" "}
                   {t("contact.contactInfo.email")}
                 </p>
                 <div>
@@ -246,7 +244,9 @@ export default function Contact() {
                   <p className="text-gray-700 text-lg">
                     {t("contact.branch1.add")}
                   </p>
-                  <p className="text-gray-700 text-lg">{t("contact.branch1.tel")}</p>
+                  <p className="text-gray-700 text-lg">
+                    {t("contact.branch1.tel")}
+                  </p>
                 </div>
 
                 <div>
@@ -256,7 +256,9 @@ export default function Contact() {
                   <p className="text-gray-700 text-lg">
                     {t("contact.branch2.add")}
                   </p>
-                  <p className="text-gray-700 text-lg">{t("contact.branch2.tel")}</p>
+                  <p className="text-gray-700 text-lg">
+                    {t("contact.branch2.tel")}
+                  </p>
                 </div>
 
                 <div>
@@ -266,7 +268,9 @@ export default function Contact() {
                   <p className="text-gray-700 text-lg">
                     {t("contact.branch3.add")}
                   </p>
-                  <p className="text-gray-700 text-lg">{t("contact.branch3.tel")}</p>
+                  <p className="text-gray-700 text-lg">
+                    {t("contact.branch3.tel")}
+                  </p>
                 </div>
               </div>
             </div>

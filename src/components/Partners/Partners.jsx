@@ -2,7 +2,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import { MoveLeft, MoveRight } from "lucide-react";
 
 import logo1 from "../../assets/partners/Alinmaa-bank.svg";
 import logo2 from "../../assets/partners/Alomeir.svg";
@@ -22,7 +21,6 @@ import logo11 from "../../assets/partners/Masar-Aljazera.svg";
 import logo10 from "../../assets/partners/Hadifco.svg";
 import logo8 from "../../assets/partners/fayfa.svg";
 import logo18 from "../../assets/partners/salalemAlyamamah.svg";
-import logo19 from "../../assets/partners/SCA.svg";
 
 import { useTranslation } from "react-i18next";
 
@@ -48,7 +46,6 @@ export default function Partners() {
     { id: 16, img: logo16 },
     { id: 17, img: logo17 },
     { id: 18, img: logo18 },
-    { id: 19, img: logo19 },
   ];
 
   return (
@@ -61,16 +58,6 @@ export default function Partners() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 relative">
-        {/* ===== Prev Button ===== */}
-        {/* <button
-          className="swiper-button-prev hidden opacity-0 md:opacity-100 md:flex items-center justify-center
-          absolute left-0 lg:-left-8 top-1/2 -translate-y-1/2
-          border border-green-600 bg-white hover:bg-green-50
-          p-3 rounded-full transition z-10"
-        >
-          <MoveLeft className="w-5 h-5 text-green-700" />
-        </button> */}
-
         {/* ===== Slider ===== */}
         <Swiper
           key={i18n.language}
@@ -113,16 +100,6 @@ export default function Partners() {
             </SwiperSlide>
           ))}
         </Swiper>
-
-        {/* ===== Next Button ===== */}
-        {/* <button
-          className="swiper-button-next hidden opacity-0 md:opacity-100 md:flex items-center justify-center
-          absolute right-0 lg:-right-8 top-1/2 -translate-y-1/2
-          border border-green-600 bg-white hover:bg-green-50
-          p-3 rounded-full transition z-10"
-        >
-          <MoveRight className="w-5 h-5 text-green-700" /> */}
-        {/* </button> */}
       </div>
     </section>
   );

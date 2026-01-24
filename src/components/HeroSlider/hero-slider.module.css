@@ -26,7 +26,7 @@
 }
 
 .stripMask span {
-   width: calc(100% / var(--count));
+  width: calc(100% / var(--count));
   height: 100%;
   margin-left: -1px;
   background-image: var(--img);
@@ -59,7 +59,7 @@
   flex-direction: column;
 }
 .dirTtb span {
-   width: 100%;
+  width: 100%;
   height: calc(100% / var(--count));
 
   background-size: 100% calc(100% * var(--count));
@@ -73,7 +73,7 @@
   flex-direction: column;
 }
 .dirBtt span {
-   width: 100%;
+  width: 100%;
   height: calc(100% / var(--count));
 
   background-size: 100% calc(100% * var(--count));
@@ -121,10 +121,3 @@
   background: rgba(0, 0, 0, 0.45);
   z-index: 2;
 }
-
-/* ================= CONTENT ================= */
-/* .heroContent {
-  position: relative;
-  z-index: 3;
-  height: 100%;
-} */

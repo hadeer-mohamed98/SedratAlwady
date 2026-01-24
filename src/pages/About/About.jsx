@@ -9,22 +9,20 @@ import {
   Telescope,
   CircleCheckBig,
   ClipboardPen,
-  MoveRight,
-  MoveLeft,
 } from "lucide-react";
 import backgroundImg from "../../assets/backgroundImg.webp";
-// import backgroundImg2 from "../../assets/img2.jpg";
 import visionImg from "../../assets/vision.webp";
 import missionImg from "../../assets/mission.webp";
 import messageImg from "../../assets/message.webp";
 import heroImg from "../../assets/HomeSlider/villa.webp";
-import certificate1 from "../../assets/certificate1.webp";
-import certificate2 from "../../assets/certificate2.webp";
 import BasicHero from "../../components/BasicHero/BasicHero.jsx";
-import dots from "../../assets/Dotts.svg";
 import founder from "../../assets/ampoji.png";
-import organizationalStructure from "../../assets/organizational-structure.png";
-import organizationalStructure2 from "../../assets/organizational-structure2.png";
+
+import orgArDesktop from "../../assets/org-ar-desktop.png";
+import orgArMobile from "../../assets/org-ar-mobile.jpeg";
+import orgEnDesktop from "../../assets/org-en-desktop.png";
+import orgEnMobile from "../../assets/org-en-mobile.png";
+
 import UseScrollAnimation from "../../hooks/UseScrollAnimation/UseScrollAnimation.jsx";
 import ScrollToTopButton from "../../components/ScrollToTopButton/ScrollToTopButton.jsx";
 import { useTranslation } from "react-i18next";
@@ -32,6 +30,9 @@ import { useTranslation } from "react-i18next";
 export default function About() {
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === "ar";
+
+  const orgDesktopImg = isRTL ? orgArDesktop : orgEnDesktop;
+  const orgMobileImg = isRTL ? orgArMobile : orgEnMobile;
 
   // who are we
   const cards = [
@@ -79,18 +80,6 @@ export default function About() {
       img: messageImg,
     },
   ];
-
-  // certificates
-  // const cards3 = [
-  //   {
-  //     id: 1,
-  //     img: certificate1,
-  //   },
-  //   {
-  //     id: 2,
-  //     img: certificate2,
-  //   },
-  // ];
 
   const [leftRef, leftClass] = UseScrollAnimation(
     "animate-fade-down",
@@ -269,16 +258,18 @@ export default function About() {
             {t("about.organizationalStructure")}
           </h2>
         </div>
+        {/* Desktop */}
         <img
-          src={organizationalStructure}
-          alt="Organizational Structure"
-          className="hidden md:block"
+          src={orgDesktopImg}
+          alt="Organizational Structure Desktop"
+          className="hidden md:block mx-auto"
         />
 
+        {/* Mobile */}
         <img
-          src={organizationalStructure2}
+          src={orgMobileImg}
           alt="Organizational Structure Mobile"
-          className="block md:hidden"
+          className="block md:hidden px-3 mx-auto"
         />
       </section>
 
