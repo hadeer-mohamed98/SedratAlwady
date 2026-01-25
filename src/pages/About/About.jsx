@@ -21,7 +21,7 @@ import founder from "../../assets/ampoji.png";
 import orgArDesktop from "../../assets/org-ar-desktop.png";
 import orgArMobile from "../../assets/org-ar-mobile.jpeg";
 import orgEnDesktop from "../../assets/org-en-desktop.png";
-import orgEnMobile from "../../assets/org-en-mobile.png";
+import orgEnMobile from "../../assets/org-en-mobile.jpeg";
 
 import UseScrollAnimation from "../../hooks/UseScrollAnimation/UseScrollAnimation.jsx";
 import ScrollToTopButton from "../../components/ScrollToTopButton/ScrollToTopButton.jsx";
