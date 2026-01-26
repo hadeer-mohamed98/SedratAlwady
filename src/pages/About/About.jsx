@@ -18,6 +18,9 @@ import heroImg from "../../assets/HomeSlider/villa.webp";
 import BasicHero from "../../components/BasicHero/BasicHero.jsx";
 import founder from "../../assets/ampoji.png";
 
+import equipAr from "../../assets/equip-ar.png";
+import equipEn from "../../assets/equip-en.png";
+
 import orgArDesktop from "../../assets/org-ar-desktop.png";
 import orgArMobile from "../../assets/org-ar-mobile.jpeg";
 import orgEnDesktop from "../../assets/org-en-desktop.png";
@@ -30,6 +33,8 @@ import { useTranslation } from "react-i18next";
 export default function About() {
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === "ar";
+
+  const equipmentImg = isRTL ? equipAr : equipEn;
 
   const orgDesktopImg = isRTL ? orgArDesktop : orgEnDesktop;
   const orgMobileImg = isRTL ? orgArMobile : orgEnMobile;
@@ -83,11 +88,11 @@ export default function About() {
 
   const [leftRef, leftClass] = UseScrollAnimation(
     "animate-fade-down",
-    "delay-300"
+    "delay-300",
   );
   const [rightRef, rightClass] = UseScrollAnimation(
     "animate-slide-top-right",
-    "delay-300"
+    "delay-300",
   );
 
   const pageTitle = t("about.pageTitle");
@@ -270,6 +275,21 @@ export default function About() {
           src={orgMobileImg}
           alt="Organizational Structure Mobile"
           className="block md:hidden px-3 mx-auto"
+        />
+      </section>
+
+      {/* Equipment structure */}
+      <section className=" mx-auto bg-gray-200">
+        <div className="text-center pt-10 px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#20978F]">
+            {t("about.equipmentStructure")}
+          </h2>
+        </div>
+
+        <img
+          src={equipmentImg}
+          alt="Equipment Structure"
+          className="md:max-w-2xl mx-auto"
         />
       </section>
 
