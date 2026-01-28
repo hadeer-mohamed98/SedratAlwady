@@ -5,43 +5,6 @@
     font-family: Arial, Helvetica, sans-serif;
   }
 }
-/* ========================= */
-/* .hero-image {
-  transform: scale(1);
-  will-change: transform;
-  animation: none;
-}
-
-.swiper-slide-active .hero-image {
-  animation: heroZoom 5s linear forwards;
-}
-
-@keyframes heroZoom {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.12);
-  }
-}
-
-.hero-content {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: none;
-}
-
-.swiper-slide-active .hero-content {
-  animation: contentFade 0.5s ease forwards;
-  animation-delay: 0.5s;
-}
-
-@keyframes contentFade {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-} */
 
 /* ===== Media Wrapper ===== */
 .hero-media {
@@ -103,47 +66,6 @@
     display: none !important;
   }
 }
-
-
-/* ===== Progress Bar ===== */
-/* .hero-progress {
-  position: absolute;
-  top: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  height: 3px;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 999px;
-  z-index: 20;
-  overflow: hidden;
-}
-
-.hero-progress-bar {
-  display: block;
-  height: 100%;
-  width: 0%;
-  background: #3cab41;
-}
-
-.swiper-slide-active .hero-progress-bar {
-  animation: progressFill 5s linear forwards;
-} */
-
-/* @keyframes progressFill {
-  to {
-    width: 100%;
-  }
-} */
-
-/* ===== Reduced Motion Support ===== */
-/* @media (prefers-reduced-motion: reduce) {
-  .hero-image,
-  .hero-content,
-  .hero-progress-bar {
-    animation: none !important;
-  }
-} */
 
 @keyframes slide-left {
   0% {
@@ -267,10 +189,6 @@
 .animate-slide-top-right {
   animation: slideFromTopRight 1s ease-out forwards;
 }
-
-/* .animate-grass {
-  animation: grassSlide 50s linear infinite;
-} */
 
 /* ==== animation delays ==== */
 .delay-100 {
