@@ -125,7 +125,7 @@ export default function Counters() {
       id: 3,
       icon: Clock,
       title: t("counters.experience"),
-      value: 3,
+      value: 11,
       bg: "bg-[#00978B]",
     },
     {
